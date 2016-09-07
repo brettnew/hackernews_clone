@@ -1,4 +1,7 @@
 class Link < ActiveRecord::Base
+
+  has_many :comments
+
   validates :title, :url, :score, :presence => true
 
   after_initialize :init

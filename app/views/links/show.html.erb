@@ -1,0 +1,18 @@
+<h1><%= @link.title %></h1>
+
+<% if @link.comments.any? %>
+  <h4>Comments: </h4>
+  <ul>
+    <% @link.comments.each do |comment| %>
+      <li>
+        <h5><%= comment.author %></h5>
+        <p><%= comment.content %></p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+<p>There are no comments. Please contribute to this discussion :)</p>
+<% end %>
+
+<p><%= link_to "New Comment", new_link_comment_path(@link) %></p>
+<p><%= link_to "Return to Links", links_path %></p>

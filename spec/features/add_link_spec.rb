@@ -9,4 +9,10 @@ describe "the add a link process" do
     click_on "Create Link"
     expect(page).to have_content 'The Sky is Falling'
   end
+
+  it 'gives error when no name is entered' do
+    visit new_link_path
+    click_on 'Create Link'
+    expect(page). to have_content 'errors'
+  end
 end

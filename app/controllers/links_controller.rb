@@ -5,6 +5,7 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+    render :show
   end
 
   def new
@@ -18,6 +19,7 @@ class LinksController < ApplicationController
     else
       render :new
     end
+  end
 
     def edit
       @link = Link.find(params[:id])
@@ -26,11 +28,17 @@ class LinksController < ApplicationController
     def update
       @link = Link.find(params[:id])
     end
-  end
 
   def add_one
     @link = Link.find(params[:link_id])
     @link.score += 1
+    @link.save
+    redirect_to(links_path)
+  end
+
+  def subtract_one
+    @link = Link.find(params[:link_id])
+    @link.score -= 1
     @link.save
     redirect_to(links_path)
   end
