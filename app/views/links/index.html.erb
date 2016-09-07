@@ -1,0 +1,11 @@
+<h1>Links</h1>
+<ul>
+  <% @links.each do |link| %>
+    <li><%= link_to link.title, link.url%></li>
+    <h5>Score: <%= link.score %>
+      <%= button_to  "Upvote", link_add_one_path(link), method: :patch%>
+    </h5>
+  <% end %>
+</ul>
+
+<%= link_to "Add New Link", new_link_path, :class => "btn btn-default" %>
