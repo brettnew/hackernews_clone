@@ -1,7 +1,47 @@
+//
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  h1, h2, h3, h4, h5 {
+    margin-top: 1em;
+    padding-top: 1em;
+    color: #333;
+    line-height: 1.5;
+  }
+}
+section {
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 1em 1em;
+  color: #555;
+}
 
-// body {
-//   background-color: blue;
-// }
+a {
+  color: #e81c4f;
+}
+
+header {
+  // background-color: #263d36;
+  background-image: url("millenial.jpeg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 30vw 2em;
+  position: relative;;
+  text-align: center;
+  width: 100%;
+  h1 {
+    display: block;
+    color: white;
+    vertical-align: top;
+  }
+  .header-title {
+    }
+  top: -20px;
+  left: -20px;
+  margin: 0;
+}
