@@ -7,6 +7,10 @@ class Link < ActiveRecord::Base
     self.score ||= 0.0
   end
 
+  def age
+    self.score -= 1
+  end
+
   def add_one
     self.score += 1
   end
